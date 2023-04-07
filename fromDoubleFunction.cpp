@@ -25,11 +25,12 @@ void fromDouble(double x) {
 	long long int n = 10000000000000;
 	x = fabs(x) * n;
 	unsigned long long int divisor = nod(x ,n);
-	cout<<divisor<<endl;	
-	cout<<x/divisor<<" "<<n/divisor<<endl;
-	cout<<(x/divisor)/(n/divisor)<<endl;
+	cout<<x/divisor<<"/"<<n/divisor<<"="<<(x/divisor)/(n/divisor)<<endl;
 }
 
 int main() {
 	fromDouble(-512.99);
+	fromDouble(5.3E-5);
+	fromDouble(-1.20003E-7);
+	fromDouble(5.3);
 }
