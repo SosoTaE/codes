@@ -124,6 +124,13 @@ class matrix {
                     }   
                 }
             }
+    
+
+            for (int i = 0;i < row;i++) {
+                delete array[i];
+            }
+
+            delete[] array;
 
             setSize(row,arr.getCol());
             array = multipledArray;
@@ -139,6 +146,12 @@ class matrix {
                     transposedArray[i]->changeAt(j,array[j]->at(i));
                 }
             }
+
+            for (int i = 0;i < row;i++) {
+                delete array[i];
+            }
+
+            delete[] array;
 
 
             setSize(col,row);
@@ -163,7 +176,6 @@ class matrix {
 int main() {
 
     matrix mat(3,3);
-    matrix tam(3,3);
-    mat.add(tam);
+    mat.transpose();
     mat.print();
 }
